@@ -1,19 +1,28 @@
 <template>
-
-  <NavPage></NavPage>
-  <ContentPage></ContentPage>
-  <FooterPage></FooterPage>
+  <div class="container">
+      <div>
+        <TrianguloEquilatero></TrianguloEquilatero>
+      </div>
+      <div>
+        <AreaCirculo></AreaCirculo>
+      </div>
+      <div>
+        <AreaTrapezio></AreaTrapezio>
+      </div>
+  </div>
 </template>
 
 <script>
-import ContentPage from './components/default/ContentPage.vue';
-import FooterPage from './components/default/FooterPage.vue';
-import NavPage from './components/default/NavPage.vue';
+import AreaCirculo from './components/Calculos/AreaCirculo.vue';
+import AreaTrapezio from './components/Calculos/AreaTrapezio.vue';
+import TrianguloEquilatero from './components/Calculos/TrianguloEquilatero.vue';
 
 export default {
   name: 'App',
   components: {
-    NavPage, ContentPage, FooterPage
+    TrianguloEquilatero,
+    AreaCirculo,
+    AreaTrapezio
   }
 }
 </script>
@@ -26,5 +35,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.container{
+  display: flex;
+  justify-content: space-around;
 }
 </style>
